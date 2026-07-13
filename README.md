@@ -78,6 +78,6 @@
   #(formatted string): everything between curly braces {} is
   #evaluated as a Python expression and the result is inserted in its
   #place in the final text. Here "datetime.now()" obtains the current
-  # date and time, and ":%Y-%m-%d" is a formatting specifier that turns it# into a string like "2026-07-03". The final result is therefore a
-  # relative path like "./File_name_2026-07-03.docx", in the
-  # current folder from which the script is launched.
+  #date and time, and ":%Y-%m-%d" is a formatting specifier that turns it# into a string like "2026-07-03". The final result is therefore a
+  #relative path like "./File_name_2026-07-03.docx", in the
+  #current folder from which the script is launched.
