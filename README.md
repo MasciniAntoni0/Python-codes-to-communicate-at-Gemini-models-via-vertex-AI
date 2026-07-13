@@ -1,0 +1,1 @@
+# Python-codes-to-communicate-at-Gemini-models-via-vertex-AI
