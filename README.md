@@ -59,7 +59,7 @@
   #next one "gemini-2.5-flash" (faster/cheaper), thus implementing a
   #"failover" mechanism (automatic fallback in case of error).
 
-  # Separator blank line.
+  #Separator blank line.
 
   NUM_ITEMS = 15            # how many news items to gather Inserted 15 as default but You can edit it and 
   #Defines an integer constant representing how many distinct news items the
