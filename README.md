@@ -10,74 +10,74 @@
 
 ## Parametres to edit inside the code to edit before to use it:
 
-  # -----------------------------------------------------------------------------
-  # Configuration
-  # -----------------------------------------------------------------------------
-  # The lines above are a "block" comment: they only serve to visually
-  # separate the logical sections of the file for whoever reads the code; they have
-  # no effect on the execution of the program.
+  #-----------------------------------------------------------------------------
+  #Configuration
+  #-----------------------------------------------------------------------------
+  #The lines above are a "block" comment: they only serve to visually
+  #separate the logical sections of the file for whoever reads the code; they have
+  #no effect on the execution of the program.
 
   TOPIC = ""  # Insert here the topic that You want the news. for example AI, Politics, Economy, Tech and more else
-  # Is a variable that contains a string where the follow string is the topic that You want the news
-  # in the final word Document, so insert in the "" the new's topic.
+  #Is a variable that contains a string where the follow string is the topic that You want the news
+  #in the final word Document, so insert in the "" the new's topic.
 
   NEWS_FEATURES = """"""
-  # This variable contain a docstring with the "features" about the news for example 
-  # if i want all the news about AI, I will insert in the docstring what kind of news I want about ai, so 
-  # new updates and models released by AI companies, AI regulaments by governments, futures updates/models released by AI companies and their features,
-  # hardware and more else. in this docsting You have to specific what kind of news you want obtain about the topic   
+  #This variable contain a docstring with the "features" about the news for example 
+  #if i want all the news about AI, I will insert in the docstring what kind of news I want about ai, so 
+  #new updates and models released by AI companies, AI regulaments by governments, futures updates/models released by AI companies and their features,
+  #hardware and more else. in this docsting You have to specific what kind of news you want obtain about the topic   
   PROJECT_ID = "your-gcp-project-id"
-  # Defines a global variable (constant by convention, written in
-  # UPPERCASE) containing the identifier of the Google Cloud project to use
-  # to authenticate and bill calls to Vertex AI. This value must
-  # correspond to a real project on which the ADC login
-  # (Application Default Credentials) described in the initial docstring has been performed.
+  #Defines a global variable (constant by convention, written in
+  #UPPERCASE) containing the identifier of the Google Cloud project to use
+  #to authenticate and bill calls to Vertex AI. This value must
+  #correspond to a real project on which the ADC login
+  #(Application Default Credentials) described in the initial docstring has been performed.
 
-  # "global" works for the newest 2.5 models; "us-central1" is a safe alternative.
-  # Explanatory comment: clarifies the possible alternatives for the
-  # next variable (LOCATION), explaining in which cases it is convenient to use one value or
-  # the other. It is not executed code.
+  #"global" works for the newest 2.5 models; "us-central1" is a safe alternative.
+  #Explanatory comment: clarifies the possible alternatives for the
+  #next variable (LOCATION), explaining in which cases it is convenient to use one value or
+  #the other. It is not executed code.
 
   LOCATION = ""
-  # Defines the geographic/infrastructural region of Google Cloud
-  # (data center) to which requests to the Vertex AI model will be
-  # routed. Some models or features are only available in certain
-  # regions, so this value must be compatible with the models listed below.
-  # For example "global", "us-central1" and more else.
+  #Defines the geographic/infrastructural region of Google Cloud
+  #(data center) to which requests to the Vertex AI model will be
+  #routed. Some models or features are only available in certain
+  #regions, so this value must be compatible with the models listed below.
+  #For example "global", "us-central1" and more else.
 
-  # Separator blank line.
+  #Separator blank line.
 
-  # Tried in order — automatic failover if one is unavailable / quota-limited.
-  # Comment: explains the logic behind the MODELS list defined right below,
-  # i.e. that they will be tried in sequence until one responds correctly.
+  #Tried in order — automatic failover if one is unavailable / quota-limited.
+  #Comment: explains the logic behind the MODELS list defined right below,
+  #i.e. that they will be tried in sequence until one responds correctly.
 
   MODELS = ["gemini-2.5-pro", "gemini-2.5-flash"]
-  # Creates a list (ordered, mutable data structure) of strings, each
-  # the name of a Gemini model available on Vertex AI. Order matters: the
-  # program will first try "gemini-2.5-pro" (more capable but possibly
-  # slower/more expensive or subject to quota limits) and, only if it fails, will move to the
-  # next one "gemini-2.5-flash" (faster/cheaper), thus implementing a
-  # "failover" mechanism (automatic fallback in case of error).
+  #Creates a list (ordered, mutable data structure) of strings, each
+  #the name of a Gemini model available on Vertex AI. Order matters: the
+  #program will first try "gemini-2.5-pro" (more capable but possibly
+  #slower/more expensive or subject to quota limits) and, only if it fails, will move to the
+  #next one "gemini-2.5-flash" (faster/cheaper), thus implementing a
+  #"failover" mechanism (automatic fallback in case of error).
 
   # Separator blank line.
 
   NUM_ITEMS = 15            # how many news items to gather Inserted 15 as default but You can edit it and 
-  # Defines an integer constant representing how many distinct news items the
-  # model must return in total. The comment alongside (after the #)
-  # clarifies the meaning of the value; the value itself will then be inserted
-  # dynamically into the prompt text sent to the model (see build_prompt).
+  #Defines an integer constant representing how many distinct news items the
+  #model must return in total. The comment alongside (after the #)
+  #clarifies the meaning of the value; the value itself will then be inserted
+  #dynamically into the prompt text sent to the model (see build_prompt).
   
   INCLUDE_SOURCES = True    # append a "Sources" section (the grounded web links)
-  # Defines a boolean constant (True/False) that acts as a
-  # switch ("feature flag"): if True, a section with the list of
-  # web links used by the model as sources during the
-  # search ("grounding", i.e. anchoring responses to real sources) will also be added to the final Word document.
+  #Defines a boolean constant (True/False) that acts as a
+  #switch ("feature flag"): if True, a section with the list of
+  #web links used by the model as sources during the
+  #search ("grounding", i.e. anchoring responses to real sources) will also be added to the final Word document.
 
  OUTPUT_FILE = f"File_name{datetime.now():%Y-%m-%d}.docx"   # Substitute "File_name" with the name that you want save the final file 
-  # Builds the output file path/name using an "f-string"
-  # (formatted string): everything between curly braces {} is
-  # evaluated as a Python expression and the result is inserted in its
-  # place in the final text. Here "datetime.now()" obtains the current
+  #Builds the output file path/name using an "f-string"
+  #(formatted string): everything between curly braces {} is
+  #evaluated as a Python expression and the result is inserted in its
+  #place in the final text. Here "datetime.now()" obtains the current
   # date and time, and ":%Y-%m-%d" is a formatting specifier that turns it# into a string like "2026-07-03". The final result is therefore a
   # relative path like "./File_name_2026-07-03.docx", in the
   # current folder from which the script is launched.
