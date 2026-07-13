@@ -81,3 +81,5 @@
   #date and time, and ":%Y-%m-%d" is a formatting specifier that turns it# into a string like "2026-07-03". The final result is therefore a
   #relative path like "./File_name_2026-07-03.docx", in the
   #current folder from which the script is launched.
+# where see here on github code's output files examples
+I added in this repository the subdirectory code_outputs_files, where inside that You will find some examples of word's files that code returns as output with the news. 
