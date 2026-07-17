@@ -1,5 +1,4 @@
-## Python-codes-to-communicate-at-Gemini-models-via-vertex-AI
-
+## TopicNewsPython-codes-to-communicate-at-Gemini-models-via-APIsSystems
 ## Explanation about the repository and how use the code
   Repository where I have shared a python code that communicate at gemini's models via vertex AI. In this scripts the gemini's models (or also third parts models availables in vertex AI) navigate in       internet and take the most recent and relevant news about a specific topic (for example news about ai, linux, IT, politics and more, to choose the topic You have to edit the prompt in its function       where is explained better below in repository's end) and the code take the model's output, transform the text in json format and write all the N news inside a final word document.
   To execute the a script, You have to configure the first parametres so location (The google's servers geographical area), project ID (Your project's id in google cloud), num of items (how many news      you want in the final document) and the access at vertex ai is ADC this part to edit is explained better below in the repository's end. Before to execute you have to install local gcloud (google cloud   cli) and set default credentials and default project using these 2 commands (these commands are in bash so work mainly in linux terminals):
