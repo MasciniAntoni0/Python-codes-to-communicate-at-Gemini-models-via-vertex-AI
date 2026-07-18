@@ -84,7 +84,7 @@
 #separate the logical sections of the file for whoever reads the code;
 #they have no effect on program execution.
 
-GEMINI_API_KEY = "" # Insert here Your own gemini API key
+GEMINI_API_KEY = ""      # Insert here Your own gemini API key
 
 #Ordered by priority — this is the Gemini API's free-tier model
 #fallback chain: the SDK will try the first model, and only move on to
