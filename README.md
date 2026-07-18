@@ -2,9 +2,9 @@
 ## Explanation about the repository and how use the code
   Repository where I have shared a python code that communicate at gemini's models via vertex AI. In this scripts the gemini's models (or also third parts models availables in vertex AI) navigate in       internet and take the most recent and relevant news about a specific topic (for example news about ai, linux, IT, politics and more, to choose the topic You have to edit the prompt in its function       where is explained better below in repository's end) and the code take the model's output, transform the text in json format and write all the N news inside a final word document.
   To execute the a script, You have to configure the first parametres so location (The google's servers geographical area), project ID (Your project's id in google cloud), num of items (how many news      you want in the final document) and the access at vertex ai is ADC this part to edit is explained better below in the repository's end. Before to execute you have to install local gcloud (google cloud   cli) and set default credentials and default project using these 2 commands (these commands are in bash so work mainly in linux terminals):
-  # command to execute for set default credentials for ADC access:
+  # command to execute for set default credentials for ADC access to communicate at the gemini's models via ADC Vertex AI:
     gcloud auth application-default login
-  # Command to set the default project (GCP it means google cloud platform):
+  # Command to set the default project (GCP it means google cloud platform) to communicate at the gemini's models via ADC Vertex AI:
     gcloud config set project YOUR_GCP_PROJECT_ID
 
 ## Parametres to edit inside the code before to use the python script newsMainScriptGcloudVertexAI.py to communicate at gemini's models via Vertex AI:
@@ -44,8 +44,6 @@
   #regions, so this value must be compatible with the models listed below.
   #For example "global", "us-central1" and more else.
 
-  #Separator blank line.
-
   #Tried in order — automatic failover if one is unavailable / quota-limited.
   #Comment: explains the logic behind the MODELS list defined right below,
   #i.e. that they will be tried in sequence until one responds correctly.
@@ -57,8 +55,6 @@
   #slower/more expensive or subject to quota limits) and, only if it fails, will move to the
   #next one "gemini-2.5-flash" (faster/cheaper), thus implementing a
   #"failover" mechanism (automatic fallback in case of error).
-
-  #Separator blank line.
 
   NUM_ITEMS = 15            # how many news items to gather Inserted 15 as default but You can edit it and 
   #Defines an integer constant representing how many distinct news items the
@@ -150,6 +146,15 @@ OUTPUT_FILE = f"./AI_News_{datetime.now():%Y-%m-%d}.docx"
 #"./AI_News_2026-07-03.docx", in the current folder from which the script
 #is launched.
 
+TOPIC = "" 
+#Is a variable that contains a string where the follow string is the topic that You want the news
+#in the final word Document, so insert in the "" the new's topic.
+
+NEWS_FEATURES = """"""
+#This variable contain a docstring with the "features" about the news for example 
+#if i want all the news about AI, I will insert in the docstring what kind of news I want about ai, so 
+#new updates and models released by AI companies, AI regulaments by governments, futures updates/models released by AI companies and their features,
+#hardware and more else. in this docsting You have to specific what kind of news you want obtain about the topic
 #----------------------------------------------------------------------------
   
 ## where see here on github code's output files examples
