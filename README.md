@@ -107,6 +107,7 @@ MODEL_FALLBACK_CHAIN = [
     "gemini-3-flash-preview",
     "gemini-2.5-flash",
 ]
+
 #Creates a list (an ordered, mutable data structure) of strings, each one
 #the name of a Gemini "flash" model (the lightest, fastest, and cheapest
 #model family, suited to the API's free tier) available through the
